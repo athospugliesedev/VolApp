@@ -1,7 +1,10 @@
 import { TouchableOpacity } from 'react-native'
-import { VStack, Image, Text, Box, FormControl, Input, Button, Link } from 'native-base'
+import { VStack, Image, Text, Box, FormControl, Button, Link } from 'native-base'
 import Logo from './assets/Logo.png'
 import { Title } from './components/Title'
+import { InputVoll } from './components/Input'
+import ButtonVoll from './components/ButtonVoll'
+
 
 export default function Login() {
   return (
@@ -9,41 +12,25 @@ export default function Login() {
       <Image source={Logo} alt="Logo Voll" />
       <Title title="Faça login em sua conta" />
       <Box>
-        <FormControl mt={3}>
-          <FormControl.Label>
-            E-mail
-          </FormControl.Label>
-          <Input
+      
+          <InputVoll
+          label="E-mail"
           placeholder="Insira seu e-mail"
-          size="lg"
-          w="100%"
-          borderRadius="lg"
-          bgColor="gray.100"
-          shadow={3}
           />
-        </FormControl>
-        <FormControl mt={3}>
-          <FormControl.Label>
-            Senha
-          </FormControl.Label>
-          <Input
+        <InputVoll
+          label="Senha"
           placeholder="Insira sua senha"
-          size="lg"
-          w="100%"
-          borderRadius="lg"
-          bgColor="gray.100"
-          shadow={3}
           />
-        </FormControl>
+     
       </Box>
-      <Button
+      <ButtonVoll
       w="100%"
       bg="blue.800"
       mt={10}
       borderRadius="lg"
-      >
-        Entrar
-      </Button>
+      title="Entrar"
+      />
+        
       <Link href='' mt={2}>
       Esqueceu sua senha?
       </Link>
