@@ -6,7 +6,7 @@ import { InputVoll } from './components/Input'
 import ButtonVoll from './components/ButtonVoll'
 
 
-export default function Login() {
+export default function Login({ navigation }) {
   return (
     <VStack flex={1} alignItems="center" p={5} justifyContent="center">
       <Image source={Logo} alt="Logo Voll" />
@@ -29,6 +29,7 @@ export default function Login() {
       mt={10}
       borderRadius="lg"
       title="Entrar"
+      onPress={() => navigation.navigate('Tabs')}
       />
         
       <Link href='' mt={2}>
@@ -36,7 +37,7 @@ export default function Login() {
       </Link>
       <Box flexDirection="row" justifyContent="center" mt={8}>
         <Text>Ainda não tem cadastro? </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
           <Text color="blue.500">
              Faça seu cadastro
           </Text>
